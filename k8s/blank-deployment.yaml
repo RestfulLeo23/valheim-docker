@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu
+  namespace: valheim-servers
+  labels:
+    app: ubuntu
+spec:
+  containers:
+  - image: ubuntu
+    command:
+      - "sleep"
+      - "604800"
+    imagePullPolicy: IfNotPresent
+    name: ubuntu
+    volumeMounts:
+        - name: valheim-persistent-storage-saves
+          mountPath: /home/steam/.config/unity3d/IronGate/Valheim
+  restartPolicy: Always
+  volumes:
+      - name: valheim-persistent-storage-saves
+        persistentVolumeClaim:
+          claimName: valheim-pvc-saves 
