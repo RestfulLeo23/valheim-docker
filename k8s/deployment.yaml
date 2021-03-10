@@ -38,7 +38,7 @@ spec:
         - name: WORLD
           value: 'RatVikings'
         - name: PASSWORD
-          value: 
+          value:
         - name: TZ
           value: 'America/Chicago'
         - name: PUBLIC
@@ -48,11 +48,11 @@ spec:
         - name: AUTO_BACKUP
           value: '1'
         - name: AUTO_BACKUP_SCHEDULE
-          value: '"*/15 * * * *"'
+          value: '"0 * * * *"'
         - name: AUTO_BACKUP_REMOVE_OLD
           value: '1'
         - name: AUTO_BACKUP_DAYS_TO_LIVE
-          value: '3'
+          value: '1'
         - name: AUTO_BACKUP_ON_UPDATE
           value: '1'
         - name: AUTO_BACKUP_ON_SHUTDOWN
